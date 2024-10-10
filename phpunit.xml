@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap = "vendor/autoload.php"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.0/phpunit.xsd">
+    <testsuites>
+        <testsuite name="Sybil">
+            <directory suffix="Test.php">src/tests</directory>
+        </testsuite>
+    </testsuites>
+    <extensions>
+        <bootstrap class="Qameta\Allure\PHPUnit\AllureExtension">
+            <parameter name="config" value="allure.config.php"/>
+        </bootstrap>
+    </extensions>
+</phpunit>
+

@@ -1,0 +1,41 @@
+---
+
+# You can edit this list, 
+# to get different collections of relays for different use cases.
+
+  favorite-relays:
+    - wss://thecitadel.nostr1.com
+    - wss://theforest.nostr1.com
+  large-relays:
+    - wss://relay.damus.io
+    - wss://relay.nostr.band
+    - wss://relay.primal.net
+    - wss://purplepag.es
+    - wss://nos.lol
+    - wss://relay.mostr.pub
+    - wss://relay.nos.social
+    - wss://nostr.land
+    - wss://nostr.wine
+    - wss://nostr.mom
+    - wss://relay.nostr.bg
+    - wss://relay.wellorder.net
+  more-relays:
+    - wss://relay.lumina.rocks
+    - wss://relay.poster.place
+    - wss://nostr.sovbit.host
+    - wss://christpill.nostr1.com
+    - wss://nostr21.com
+    - wss://hotrightnow.nostr1.com
+    - wss://relay.wikifreedia.xyz
+    - wss://wheat.happytavern.co
+    - wss://greensoul.space
+    - wss://nostrelites.org
+    - wss://wot.utxo.one
+    - wss://wot.nostr.party
+    - wss://wot.sovbit.host
+    - wss://wot.girino.org
+    - wss://relay.lnau.net
+    - wss://wot.siamstr.com
+    - wss://wot.sudocarlos.com
+    - wss://relay.otherstuff.fyi
+    - wss://elites.nostrati.org

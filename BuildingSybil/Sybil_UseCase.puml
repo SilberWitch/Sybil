@@ -1,0 +1,33 @@
+@startuml Sybil
+
+left to right direction
+actor Author
+actor Publisher
+actor Reader
+
+package Writing {
+  usecase "Publish wiki article" as UC1
+  usecase "Publish long-form note" as UC2
+  usecase "Publish modular article" as UC3
+}
+
+package Promotion {
+  usecase "Publish microblogging note" as UC4
+}
+
+package Viewing {
+  usecase "Find events" as UC5
+}
+
+Author --> UC1 #line:green;line.dashed
+Author --> UC2 #line:green;line.dashed
+Author --> UC3 #line:green;line.dashed
+Author --> UC4 #line:green;line.dashed
+
+Publisher --> UC1 #line:blue;line.bold
+Publisher --> UC2 #line:blue;line.bold
+Publisher --> UC3 #line:blue;line.bold
+
+Reader --> UC5 #line:purple;line.dashed
+
+@endumld

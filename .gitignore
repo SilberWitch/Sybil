@@ -1,0 +1,9 @@
+/vendor
+/src/.phpunit.result.cache
+.phpunit.result.cache
+.phpunit.cache/
+composer.lock
+/.vscode
+/allure-results
+/allure-report
+/usr
