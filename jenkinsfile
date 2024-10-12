@@ -51,12 +51,15 @@ pipeline {
     post {
         always {
                 // actions that take place every time
+                echo "always actions"
             }
         success {
                 // actions that take place upon success
+                echo "success actions"
             }
         failure {
                 //actions that take place upon failure
+                echo "failure actions"
             }
     }
 }
