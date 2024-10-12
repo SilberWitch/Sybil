@@ -38,9 +38,8 @@ pipeline {
             }
         }
 
-            post {
-            
-            }
+        post {
+            // allure
         }
     }
 }
