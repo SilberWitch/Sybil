@@ -38,10 +38,11 @@ Mostly, a Sybil did a lot of research and reading of faces and histories, and th
 
 People usually skip this step, but this helps me figure out the scope of the project. Imagining my software project as a Sybil means that I know what the software should do, and -- more importantly -- what it shouldn't do, which gives me a rough feature set:
 
-* write informative texts, that people can use as a reference (wiki pages `kind:30818`)
-* write articles, that people can discuss (long-form notes `kind:30023`)
-* write indexes that pull together information into bundles (modular articles `kind:30040`)
-* announce where people can find one of the above (notifications of a new text `kind:01`)
+* write informative texts, that people can use as a reference (wiki page `kind:30818`)
+* write articles, that people can discuss (long-form note `kind:30023`),
+* link articles together in a series or "thread", using `a` tags, 
+* write indexes that pull together information into bundles (index `kind:30040`)
+* announce where people can find one of the above (notification of a new text `kind:01`)
 * search for those four event kinds and display them, so that you can check your work
 
 That's it. All a Sybil did was talk smart, write smart, and read things smart people had written. So, that's all my software will do.
@@ -168,17 +169,25 @@ Okay, I've had a chance to recover from the tour de force from this morning, so 
 
 I call this _the installation orgy_. I go ahead and install anything and everything that I plan on using. I just hack away at the command line and the composer.json, going down the list I came up with, until everything at least works with a little test run.
 
-The crowning glory, is seeing my Jenkins run it's first pipeline and produce a little Allure report. Make sure you use `sudo systemctl enable jenkins`, to get the server to start, when you turn on your machine, and you might have to change to a different port, if you have a relay running on `localhost:8080`, already. I just moved Jenkins to `8081`.
-
-![jenkins](https://i.nostr.build/kJM8mWJWJQPA0pPi.png)
-
-### Step 2 completed: 5 hours
-
 This can take between an hour and a week because Linux.
 
 It took 5 hours. I don't want to talk about it. I'm just grateful that it wasn't worse and that I've put it behind me.
 
 Check everything into git, as the initial commit, and then let's call it a day.
+
+### Configure stuff
+
+Okay, today is the day we just try to get the entire toolchain integrated, configured, and get our `jenkinsfile` automation script setup.
+
+The crowning glory, is seeing my Jenkins run it's first pipeline and produce a little Allure report. Make sure you use `sudo systemctl enable jenkins`, to get the server to start, when you turn on your machine, and you might have to change to a different port, if you have a relay running on `localhost:8080`, already. I just moved Jenkins to `8081`.
+
+![jenkins](https://i.nostr.build/kJM8mWJWJQPA0pPi.png)
+
+### Step 2 completed: 12 hours
+
+It took 5 hours to install everything and get it running, and another 7 hours to get it all running smoothly. I know that's a lot of work, but now that you have a Jenkins, aren't you excited, thinking about what you can use it for?
+
+You'll thank me later, I promise.
 
 ## Step 3: Project Planning
 
