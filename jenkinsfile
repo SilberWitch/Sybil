@@ -26,7 +26,7 @@ pipeline {
             
             steps {
                 // run the PHP unit tests and return test coverage statistics
-                sh './vendor/bin/phpunit --coverage-html src/tests/coverage'
+                sh './vendor/bin/phpunit --coverage-html src/tests/coverage --log-junit testresult.xml'
             }
         }
 

@@ -8,3 +8,4 @@ composer.lock
 /allure-report
 /usr
 /src/tests/coverage/
+testresult.xml
