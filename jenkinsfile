@@ -26,8 +26,7 @@ pipeline {
             
             steps {
                 // run the PHP linter
-                find . -wholename "./src/*.php" -print0 |
- xargs -0 -n1 php -l
+                sh 'find . -wholename "./src/*.php" -print0 | xargs -0 -n1 php -l'
             }
         }
 
