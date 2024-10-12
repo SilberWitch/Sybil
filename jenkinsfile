@@ -19,12 +19,6 @@ pipeline {
                 git 'https://github.com/SilberWitch/Sybil.git'
                 // Make sure dependencies are installed
                 sh 'composer install'
-            }
-        }
-
-        stage('linter') {
-            
-            steps {
                 // run the PHP linter
                 sh 'find . -wholename "./src/*.php" -print0 | xargs -0 -n1 php -l'
             }
@@ -35,14 +29,6 @@ pipeline {
             steps {
                 // run the PHP unit tests and return test coverage statistics
                 sh './vendor/bin/phpunit --coverage-html src/tests/coverage'
-            }
-        }
-
-        stage('report') {
-            
-            steps {
-                // run the PHP unit tests
-                sh 'allure generate --clean'
             }
         }
 
