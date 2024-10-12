@@ -15,8 +15,6 @@ pipeline {
         stage('build') {
             
             steps {
-                // Get some code from a GitHub repository
-                git 'https://github.com/SilberWitch/Sybil.git'
                 // Make sure dependencies are installed
                 sh 'composer install'
                 // run the PHP linter
