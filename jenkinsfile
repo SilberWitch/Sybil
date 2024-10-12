@@ -7,44 +7,40 @@
 */
 
 pipeline {
-    agent { docker { image 'php:8.3.9-alpine3.20' } }
-    stages {
-        stage('build') {
-            steps {
-                sh 'php --version'
-            }
-        }
-    }
-}
-
-pipeline {
+    
     agent any
 
-    tools {
-        // Install the Maven version configured as "3.9.9" and add it to the path.
-        maven "3.9.9"
-    }
-
     stages {
-        stage('Build') {
+
+        stage('build') {
+            
             steps {
                 // Get some code from a GitHub repository
                 git 'https://github.com/SilberWitch/Sybil.git'
-
-                // Run Maven on a Unix agent.
-                sh "mvn -Dmaven.test.failure.ignore=true clean package"
-
-                // To run Maven on a Windows agent, use
-                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                // Make sure dependencies are installed
+                sh 'composer install'
             }
+        }
+
+        stage('linter') {
+            
+            steps {
+                // run the PHP linter
+                find . -wholename "./src/*.php" -print0 |
+ xargs -0 -n1 php -l
+            }
+        }
+
+        stage('test') {
+            
+            steps {
+                // run the PHP unit tests
+                sh './vendor/bin/phpunit'
+            }
+        }
 
             post {
-                // If Maven was able to run the tests, even if some of the test
-                // failed, record the test results and archive the jar file.
-                success {
-                    junit '**/target/surefire-reports/TEST-*.xml'
-                    archiveArtifacts 'target/*.jar'
-                }
+            
             }
         }
     }
