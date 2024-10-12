@@ -35,7 +35,7 @@ pipeline {
     post {
         always {
                 // publish the junit test result
-                junit '**/reports/junit/*.xml'
+                junit 'testresult.xml'
 
                 // create the allure test resport
                 allure includeProperties:
