@@ -7,3 +7,4 @@ composer.lock
 /allure-results
 /allure-report
 /usr
+/src/tests/coverage/

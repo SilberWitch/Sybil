@@ -3,14 +3,19 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.0/phpunit.xsd">
     <testsuites>
-        <testsuite name="Sybil">
-            <directory suffix="Test.php">src/tests</directory>
+        <testsuite name="Sybil Test Suite">
+        <directory>src/tests</directory>
         </testsuite>
-    </testsuites>
+  </testsuites>
     <extensions>
         <bootstrap class="Qameta\Allure\PHPUnit\AllureExtension">
             <parameter name="config" value="allure.config.php"/>
         </bootstrap>
     </extensions>
+    <source>
+        <include>
+        <directory suffix="Test.php">src/tests</directory>
+        </include>
+    </source>
 </phpunit>
 

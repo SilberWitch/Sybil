@@ -170,7 +170,7 @@ I call this _the installation orgy_. I go ahead and install anything and everyth
 
 The crowning glory, is seeing my Jenkins run it's first pipeline and produce a little Allure report. Make sure you use `sudo systemctl enable jenkins`, to get the server to start, when you turn on your machine, and you might have to change to a different port, if you have a relay running on `localhost:8080`, already. I just moved Jenkins to `8081`.
 
-![jenkins](https://i.nostr.build/dLVsQxHdSSLPKYGi.png)
+![jenkins](https://i.nostr.build/kJM8mWJWJQPA0pPi.png)
 
 ### Step 2 completed: 5 hours
 

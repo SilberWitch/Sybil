@@ -33,10 +33,30 @@ pipeline {
         stage('test') {
             
             steps {
-                // run the PHP unit tests
-                sh './vendor/bin/phpunit'
+                // run the PHP unit tests and return test coverage statistics
+                sh './vendor/bin/phpunit --coverage-html src/tests/coverage'
             }
         }
 
+        stage('report') {
+            
+            steps {
+                // run the PHP unit tests
+                sh 'allure generate --clean'
+            }
+        }
+
+    }
+
+    post {
+        always {
+                // actions that take place every time
+            }
+        success {
+                // actions that take place upon success
+            }
+        failure {
+                //actions that take place upon failure
+            }
     }
 }
